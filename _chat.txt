@@ -6,11 +6,11 @@
 [3/16/18, 17:31:34] Shaun: multi line text 1/2
 [3/16/18, 17:31:40] Shaun: multi line text 2/2
 [3/16/18, 17:31:52] Mini: Multi line text 1/2
-[3/16/18, 17:31:59] Mini: Multi line text 2/2
+[3/16/18, 17:31:59] Mini: Multi line. text 2/2
 [3/16/18, 17:32:28] Shaun: FIN
 [3/16/18, 17:32:39] Mini: FIN
 [3/16/18, 17:32:40] Shaun: ACK
-[4/16/18, 17:36:45] Mini: Hello line 1
+[12/16/18, 17:36:45] Mini: Hello line 1
 Hello line 2
 Hello line 3 [3/16/18, 17:31:02]
 Hello line 4

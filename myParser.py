@@ -7,7 +7,7 @@ for f in open('_chat.txt').readlines():
 
     '''Get Date'''
     #re_date = '((?:[0]?[1-9]|[1][012])[-:\\/.](?:(?:[0-2]?\\d{1})|(?:[3][01]{1}))[-:\\/.](?:(?:\\d{1}\\d{1})))(?![\\d])'  # MMDDYY
-    re_date = '^(\[[0-9]/[0-3][0-9]/[0-9][0-9])'
+    re_date = '^(\[[0-9]*/[0-3][0-9]/[0-9][0-9])'
     rg_date = re.compile(re_date, re.IGNORECASE | re.DOTALL)
     m_date = rg_date.search(f)
     if m_date:
