@@ -29,7 +29,6 @@ for f in open('_chat.txt').readlines():
         m_sender = rg_sender.search(f)
         if m_sender:
             sender.append(m_sender.group(1).split('] ')[1].split(':')[0])
-            print m_sender.group(1).split('] ')[1].split(':')[0]
             #print "(" + sender + ")" + "\n"
     #print text
     '''Get Message'''
@@ -38,9 +37,7 @@ for f in open('_chat.txt').readlines():
     m_msg = rg_msg.search(f)
 
     if m_msg:
-        text.append(m_msg.group(1))
-        #print "(" + msg + ")" + "\n"
-        #print text
+        text.append(m_msg.group(1).split(': ')[1])
 
     re_msg_newline = '(^[a-z0-9].*)'
     rg_msg_newline = re.compile(re_msg_newline, re.IGNORECASE | re.DOTALL)
@@ -49,5 +46,5 @@ for f in open('_chat.txt').readlines():
     if m_msg_newline:
         text[-1] = text[-1].__add__(m_msg_newline.group(1))
 
-df = pd.DataFrame(list(zip(date,time,sender,text)))
+df = pd.DataFrame(list(zip(date,time,sender,text)),columns=['date','time','sender','text'])
 df.to_csv('a.csv')
